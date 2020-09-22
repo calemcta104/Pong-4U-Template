@@ -31,7 +31,7 @@ namespace Pong
         SolidBrush whiteBrush = new SolidBrush(Color.White);
         Pen redPen = new Pen(Color.Red, 10);
         Pen bluePen = new Pen(Color.Blue, 10);
-        Pen whitePen = new Pen(Color.White, 10);
+        Pen blackPen = new Pen(Color.Black, 10);
         Font drawFont = new Font("Courier New", 10);
 
         // Sounds for game
@@ -367,7 +367,7 @@ namespace Pong
             e.Graphics.DrawLine(bluePen, this.Width / 2, 5, this.Width, 5);
             e.Graphics.DrawLine(bluePen, this.Width / 2, this.Height - 5, this.Width, this.Height - 5);
 
-            e.Graphics.DrawEllipse(whitePen, this.Width / 2 - 25, this.Height / 2 - 25, 50, 50);
+            e.Graphics.DrawEllipse(blackPen, this.Width / 2 - 25, this.Height / 2 - 25, 50, 50);
 
             //changes ball colour depending on which side its on
             if (ball.X < this.Width / 2 - ball.Width)
