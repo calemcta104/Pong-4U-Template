@@ -254,30 +254,13 @@ namespace Pong
             #region ball collision with paddles
 
             // TODO create if statment that checks p1 collides with ball and if it does
-
             // --- play a "paddle hit" sound and
             // --- use ballMoveRight boolean to change direction
-            if (ball.IntersectsWith(p1))
+            if (ball.IntersectsWith(p1) || ball.IntersectsWith(p2))
             {
-                ballMoveRight = true;
+                ballMoveRight = !ballMoveRight;
                 collisionSound.Play();
             }
-
-
-
-            // TODO create if statment that checks p2 collides with ball and if it does
-            // --- play a "paddle hit" sound and
-            // --- use ballMoveRight boolean to change direction
-            if (ball.IntersectsWith(p2))
-            {
-                ballMoveRight = false;
-                collisionSound.Play();
-            }
-
-            /*  ENRICHMENT
-             *  Instead of using two if statments as noted above see if you can create one
-             *  if statement with multiple conditions to play a sound and change direction
-             */
 
             #endregion
 
